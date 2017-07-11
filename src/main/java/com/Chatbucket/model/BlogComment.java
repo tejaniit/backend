@@ -3,13 +3,15 @@ package com.Chatbucket.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 @Entity
+@Table
 public class BlogComment {
 @Id@GeneratedValue
 	private int commentid;
 	private String blogid;
-	private String name;
-	private String comment;
+	private String title;
+	private String blog_comment;
 	public int getCommentid() {
 		return commentid;
 	}
@@ -22,17 +24,22 @@ public class BlogComment {
 	public void setBlogid(String blogid) {
 		this.blogid = blogid;
 	}
-	public String getName() {
-		return name;
+
+	
+	public String getTitle() {
+		return title;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	public String getComment() {
-		return comment;
+	public String getBlog_comment() {
+		return blog_comment;
 	}
-	public void setComment(String comment) {
-		this.comment = comment;
+	public void setBlog_comment(String blog_comment) {
+		this.blog_comment = blog_comment;
 	}
+	
+	
+	
 	
 }

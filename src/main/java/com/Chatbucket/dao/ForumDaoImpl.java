@@ -21,7 +21,7 @@ public class ForumDaoImpl implements ForumDao{
 	@Autowired
 	SessionFactory sessionFactory;
 		public void addForum(Forum forum) {
-			
+			forum.setStatus("true");
 			sessionFactory.getCurrentSession().save(forum);
 		}
 		public List<Forum> viewForums() {
@@ -40,8 +40,8 @@ public class ForumDaoImpl implements ForumDao{
 			
 			sessionFactory.getCurrentSession().update(forum);
 		}
-		public List<Forum> viewForum(boolean status) {
-			String hql="from Forum where status="+"'"+true+"'";
+		public List<Forum> viewForum(String status) {
+			String hql="from Forum where status="+"'"+status+"'";
 			Query query=sessionFactory.getCurrentSession().createQuery(hql);
 			List<Forum> list=  query.list();
 			return  list;

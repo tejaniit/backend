@@ -11,13 +11,15 @@ public class Forum {
 	private String category;
 	private String question;
 	private String answer;
-	private boolean status;
-	public boolean isStatus() {
+	private String status;
+	
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(boolean status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
+	
 	public int getForum_id() {
 		return forum_id;
 	}

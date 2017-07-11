@@ -11,5 +11,5 @@ public interface ForumDao {
 
 	void deleteForum(Forum forum);
 	void updateForum(Forum forum);
-	List<Forum> viewForum(boolean status);
+	List<Forum> viewForum(String status);
 }

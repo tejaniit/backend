@@ -39,7 +39,7 @@ public class ForumController {
 	@RequestMapping(value="/viewForum",headers="accept=Application/json",method=RequestMethod.GET)
 	public List<Forum> viewForum()
 	{
-		return forumDao.viewForum(true);
+		return forumDao.viewForum("true");
 		
 	}
 	
