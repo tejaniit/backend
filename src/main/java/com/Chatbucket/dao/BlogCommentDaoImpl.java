@@ -1,5 +1,6 @@
 package com.Chatbucket.dao;
 
+import java.util.Iterator;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -32,10 +33,13 @@ public class BlogCommentDaoImpl implements BlogCommentDao{
 		Criteria ct=sessionfactory.getCurrentSession().createCriteria(BlogComment.class);
 		 ct.add(Restrictions.eq("blogid", blogid));
 		 List<BlogComment> list=ct.list();
-		 if(list!=null)
+		 Iterator <BlogComment>it =list.iterator();
+		 while(it.hasNext())
 		 {
-			 System.out.println("list is available");
+			 BlogComment bc=(BlogComment)it.next();
+			 System.out.println(bc.getBlog_comment());
 		 }
+		 
 		return list;
 	}
 
