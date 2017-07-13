@@ -12,6 +12,6 @@ import com.Chatbucket.model.BlogComment;
 public interface BlogCommentDao {
 
 	void addComment(BlogComment blogComment);
-	List<BlogComment> viewComments(String blogid);
+	List<BlogComment> viewComments(int blogid);
 	public Blog get(int blogid);
 }

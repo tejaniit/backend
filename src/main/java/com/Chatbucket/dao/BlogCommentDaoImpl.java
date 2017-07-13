@@ -28,7 +28,7 @@ public class BlogCommentDaoImpl implements BlogCommentDao{
 		sessionfactory.getCurrentSession().save(blogComment);
 	}
 
-	public List<BlogComment> viewComments(String blogid) {
+	public List<BlogComment> viewComments(int blogid) {
 		System.out.println("in comment daoimpl");
 		Criteria ct=sessionfactory.getCurrentSession().createCriteria(BlogComment.class);
 		 ct.add(Restrictions.eq("blogid", blogid));
@@ -43,7 +43,7 @@ public class BlogCommentDaoImpl implements BlogCommentDao{
 		return list;
 	}
 
-	public Blog get(int blogid) {
+	public Blog get( int blogid) {
 		// TODO Auto-generated method stub
 		String hql="from Blog where blog_id="+blogid;
 		System.out.println(hql);

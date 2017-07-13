@@ -9,7 +9,7 @@ import javax.persistence.Table;
 public class BlogComment {
 @Id@GeneratedValue
 	private int commentid;
-	private String blogid;
+	private int blogid;
 	private String title;
 	private String blog_comment;
 	public int getCommentid() {
@@ -18,14 +18,14 @@ public class BlogComment {
 	public void setCommentid(int commentid) {
 		this.commentid = commentid;
 	}
-	public String getBlogid() {
+	
+	
+	public int getBlogid() {
 		return blogid;
 	}
-	public void setBlogid(String blogid) {
+	public void setBlogid(int blogid) {
 		this.blogid = blogid;
 	}
-
-	
 	public String getTitle() {
 		return title;
 	}

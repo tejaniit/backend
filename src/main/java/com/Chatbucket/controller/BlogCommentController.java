@@ -33,7 +33,7 @@ public void addComment(@RequestBody BlogComment blogComment )
 	blogCommentDao.addComment(blogComment);
 }
 @RequestMapping(value="/viewComments/{blogid}",headers="accept=Application/json",method=RequestMethod.GET)
-public List<BlogComment> viewComments(@PathVariable("blogid") String blogid)
+public List<BlogComment> viewComments(@PathVariable("blogid") int blogid)
 {
 	System.out.println("in comment controller");
 	return blogCommentDao.viewComments(blogid);
